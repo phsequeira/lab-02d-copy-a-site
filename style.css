@@ -1,0 +1,80 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .grid-container {
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.7fr 1.6fr 0.7fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header header header header"
+      "Main Main Main Main"
+      "Footer Footer Footer Footer";
+  }
+  .header {
+       grid-area: header; 
+    }
+  .airbnb {
+      /*  maybe adjust size*/
+       grid-area: 1 / 1 / 2 / 2; 
+    }
+    .header-mid {
+        /* add a location dates guest and search pic in boxes */
+        grid-area: 1 / 2 / 2 / 4;
+    }
+    .header-right { 
+        /* fix sign up box add help and globepic */
+        padding: 5px 5px;
+        background-color: whitesmoke;
+        border-width: 5px;
+        border-style: groove;
+        border-color: thistle;
+        border-radius: 32px;
+        text-align: center;
+        font-size: 18px;
+        grid-area: 1 / 4 / 2 / 5; 
+    }
+  .Main {
+      /* add pictures text */
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . ."
+      ". . .";
+    grid-area: Main;
+  }
+  .Footer { 
+      grid-area: Footer; 
+    }
+  .footer-left { 
+      /* keep left bottem find font-style*/ 
+      grid-area: 3 / 1 / 4 / 3; 
+      text-align: left;
+    }
+    .footer-right { 
+        /* put into right corner fix font-style */
+        grid-area: 3 / 3 / 4 / 5;
+        text-align: center; 
+        font-size: 12px;
+    }
